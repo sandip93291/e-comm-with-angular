@@ -1,0 +1,21 @@
+<div class="seller-auth-component">
+    <h1 *ngIf="isRegisterShowing">Seller Sign-Up</h1>
+    <form *ngIf="isRegisterShowing" #sellerSigup="ngForm" (ngSubmit)="signup(sellerSigup.value)">
+        <input type="text" ngModel name="username" placeholder="Enter Namr">
+        <input type="password" ngModel name="password" placeholder="Enter Password">
+        <input type="email" ngModel name="email" placeholder="EnterEmail">
+        <button>SignUP</button>
+    </form>
+    <h4 *ngIf="isRegisterShowing">Have a account <a (click)="toggleLoginRgister()">Login</a></h4>
+
+    <!-- login -->
+
+    <h1 *ngIf="!isRegisterShowing">Seller Login-Up</h1>
+    <p>{{authError}}</p>
+    <form *ngIf="!isRegisterShowing" #sellerLogin="ngForm" (ngSubmit)="login(sellerLogin.value)">
+        <input type="text" ngModel name="username" placeholder="Enter Namr">
+        <input type="password" ngModel name="password" placeholder="Enter Password">
+        <button>Login</button>
+    </form>
+    <h4 *ngIf="!isRegisterShowing">Create a account <a (click)="toggleLoginRgister()">Register</a></h4>
+</div>

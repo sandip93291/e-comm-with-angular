@@ -1,0 +1,15 @@
+<div class="add-product-component">
+    <form #addProductForm="ngForm" (ngSubmit)="AddProduct(addProductForm.value)">
+
+        <input type="text"  name="Name" ngModel placeholder="Enter Product name" required>
+        <input type="number" required name="Price" ngModel placeholder="Enter Product price" >
+        <input type="text" required name="Color" ngModel placeholder="Enter Product color">
+
+        <input type="text" required name="Category" ngModel placeholder="Enter Product category">
+        <input type="text" required name="Description" ngModel placeholder="Enter Product description">
+        <input type="text" required name="Url" ngModel placeholder="Enter Product url">
+
+        <button>Add Product</button>
+
+    </form>
+</div>

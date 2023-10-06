@@ -1,0 +1,27 @@
+.seller-auth-component{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // background-color: aqua;
+       width: 50%;
+       input{
+        width: 90%;
+        margin: 10px 0px;
+       }
+       button{
+        width: fit-content;
+       }
+        
+    }
+    h4{
+        a{
+            text-decoration: underline;
+            color: red;
+            cursor: pointer;
+        }
+    }
+}
